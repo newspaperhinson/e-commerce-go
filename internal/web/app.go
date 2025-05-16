@@ -22,7 +22,7 @@ func (a *App) Bootstrap() {
 }
 
 func (a *App) Listen(port int) {
-	fmt.Println(fmt.Sprintf("Listening on port %d...", port))
+	fmt.Printf("Listening on port %d...\n", port)
 
 	http.ListenAndServe(":"+strconv.Itoa(port), nil)
 }
