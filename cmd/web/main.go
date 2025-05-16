@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import "github.com/newspaperhinson/e-commerce-go/internal/web"
 
 func main() {
-	fmt.Println("Hello World")
+	app := web.NewApp()
+
+	app.Listen(8080)
 }
