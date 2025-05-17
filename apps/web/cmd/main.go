@@ -1,11 +1,10 @@
 package main
 
-import "fmt"
-
-func bootstrap() {
-	fmt.Println("Bootstraping Web App")
-}
+import "github.com/newspaperhinson/e-commerce-go/apps/web"
 
 func main() {
-	bootstrap()
+	app := web.NewApp()
+	app.Bootstrap()
+
+	app.Listen(":8080")
 }
